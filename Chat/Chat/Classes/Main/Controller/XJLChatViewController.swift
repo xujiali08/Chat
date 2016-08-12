@@ -24,10 +24,10 @@ class XJLChatViewController: UIViewController {
         super.viewDidLoad()
 
         self.leftTableView.registerNib(UINib.init(nibName: "XJLLeftTableViewCell", bundle: nil), forCellReuseIdentifier: leftTableViewCellID)
-        self.leftTableView.registerClass(XJLLeftTableViewCell.self, forCellReuseIdentifier: leftTableViewCellID)
+//        self.leftTableView.registerClass(XJLLeftTableViewCell.self, forCellReuseIdentifier: leftTableViewCellID)
         
         self.rightTableView.registerNib(UINib.init(nibName: "XJLRightTableViewCell", bundle: nil), forCellReuseIdentifier: rightTableViewCellID)
-        self.rightTableView.registerClass(XJLRightTableViewCell.self, forCellReuseIdentifier: rightTableViewCellID)
+//        self.rightTableView.registerClass(XJLRightTableViewCell.self, forCellReuseIdentifier: rightTableViewCellID)
         
     }
 
