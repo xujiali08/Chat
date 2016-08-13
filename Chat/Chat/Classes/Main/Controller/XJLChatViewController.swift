@@ -34,6 +34,7 @@ class XJLChatViewController: UIViewController {
         self.rightTableView.registerNib(UINib.init(nibName: "XJLRightTableViewCell", bundle: nil), forCellReuseIdentifier: rightTableViewCellID)
         
         rightTableView.hidden = true
+        leftBtn.selected = true
         leftLine.backgroundColor = UIColor.redColor()
         
         //模拟数据
@@ -66,7 +67,7 @@ extension XJLChatViewController{
         
         leftTableView.hidden = false
         rightTableView.hidden = true
-        
+        self.leftTableView.reloadData()
     }
     
     @IBAction func rightBtnClick(sender: UIButton) {
@@ -78,6 +79,7 @@ extension XJLChatViewController{
         
         leftTableView.hidden = true
         rightTableView.hidden = false
+        self.rightTableView.reloadData()
     }
     
 }
@@ -86,13 +88,17 @@ extension XJLChatViewController{
 extension XJLChatViewController:UITableViewDataSource{
     
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
+    
+        if leftBtn.selected {
         return self.cellArray.count
+        }else{
+            return 10
+        }
     }
     
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if leftTableView.hidden == false {
+        if leftBtn.selected {
             let cell = leftTableView.dequeueReusableCellWithIdentifier(leftTableViewCellID) as! XJLLeftTableViewCell
             
             return cell
@@ -115,7 +121,7 @@ extension XJLChatViewController:UITableViewDelegate{
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        if leftTableView.hidden == false {
+        if leftBtn.selected {
             return 66
         }else{
             return 44
@@ -123,7 +129,7 @@ extension XJLChatViewController:UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        
+        if leftBtn.selected {
         let signAction = UITableViewRowAction(style: .Normal, title: "标记") { (UITableViewRowAction, NSIndexPath) in
             self.leftTableView.editing = false
         }
@@ -135,12 +141,19 @@ extension XJLChatViewController:UITableViewDelegate{
         
         deleteAction.backgroundColor = UIColor.redColor()
         return [deleteAction,signAction]
+        }else{
+            return []
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if leftBtn.selected {
         let sb = UIStoryboard(name: "XJLChatViewController", bundle: nil)
         let chatVc = sb.instantiateInitialViewController()
         presentViewController(chatVc!, animated: true, completion: nil)
+        }else{
+            
+        }
         
     }
 }

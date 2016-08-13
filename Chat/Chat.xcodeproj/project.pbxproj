@@ -17,6 +17,7 @@
 		1A2097AD1D5DDFF7008FAE8B /* XJLLeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2097AB1D5DDFF7008FAE8B /* XJLLeftTableViewCell.xib */; };
 		1A2097B01D5DE006008FAE8B /* XJLRightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2097AE1D5DE006008FAE8B /* XJLRightTableViewCell.swift */; };
 		1A2097B11D5DE006008FAE8B /* XJLRightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2097AF1D5DE006008FAE8B /* XJLRightTableViewCell.xib */; };
+		1A9CBC3E1D5F5BEA0019DB3C /* XJLSenderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9CBC3D1D5F5BEA0019DB3C /* XJLSenderTextView.swift */; };
 		1AB650381D5ED327003CADE3 /* XJLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650371D5ED327003CADE3 /* XJLModel.swift */; };
 		1AB650561D5F0669003CADE3 /* MoreFunctionFrame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6504F1D5F0669003CADE3 /* MoreFunctionFrame@2x.png */; };
 		1AB650571D5F0669003CADE3 /* XHPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650511D5F0669003CADE3 /* XHPopMenu.m */; };
@@ -38,6 +39,8 @@
 		1AB650811D5F1973003CADE3 /* SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650741D5F1973003CADE3 /* SnapKit.swift */; };
 		1AB650821D5F1973003CADE3 /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650751D5F1973003CADE3 /* View+SnapKit.swift */; };
 		1AB650831D5F1973003CADE3 /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650761D5F1973003CADE3 /* ViewController+SnapKit.swift */; };
+		1AB650881D5F3015003CADE3 /* XJLAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650871D5F3015003CADE3 /* XJLAlertController.swift */; };
+		1AB6508A1D5F3028003CADE3 /* XJLAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB650891D5F3028003CADE3 /* XJLAlertController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,7 @@
 		1A2097AB1D5DDFF7008FAE8B /* XJLLeftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJLLeftTableViewCell.xib; sourceTree = "<group>"; };
 		1A2097AE1D5DE006008FAE8B /* XJLRightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLRightTableViewCell.swift; sourceTree = "<group>"; };
 		1A2097AF1D5DE006008FAE8B /* XJLRightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJLRightTableViewCell.xib; sourceTree = "<group>"; };
+		1A9CBC3D1D5F5BEA0019DB3C /* XJLSenderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLSenderTextView.swift; sourceTree = "<group>"; };
 		1AB650371D5ED327003CADE3 /* XJLModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLModel.swift; sourceTree = "<group>"; };
 		1AB6504F1D5F0669003CADE3 /* MoreFunctionFrame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreFunctionFrame@2x.png"; sourceTree = "<group>"; };
 		1AB650501D5F0669003CADE3 /* XHPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenu.h; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		1AB650741D5F1973003CADE3 /* SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapKit.swift; sourceTree = "<group>"; };
 		1AB650751D5F1973003CADE3 /* View+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+SnapKit.swift"; sourceTree = "<group>"; };
 		1AB650761D5F1973003CADE3 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SnapKit.swift"; sourceTree = "<group>"; };
+		1AB650871D5F3015003CADE3 /* XJLAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLAlertController.swift; sourceTree = "<group>"; };
+		1AB650891D5F3028003CADE3 /* XJLAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJLAlertController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +214,8 @@
 			children = (
 				1AB650601D5F0833003CADE3 /* XJLChatController.swift */,
 				1AB650611D5F0833003CADE3 /* XJLChatViewController.storyboard */,
+				1AB650871D5F3015003CADE3 /* XJLAlertController.swift */,
+				1AB650891D5F3028003CADE3 /* XJLAlertController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -223,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				1AB650641D5F0833003CADE3 /* XJLMessageViewCell.swift */,
+				1A9CBC3D1D5F5BEA0019DB3C /* XJLSenderTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AB6507F1D5F1973003CADE3 /* Info.plist in Resources */,
+				1AB6508A1D5F3028003CADE3 /* XJLAlertController.xib in Resources */,
 				1A2097981D5DD2CD008FAE8B /* LaunchScreen.storyboard in Resources */,
 				1A2097AD1D5DDFF7008FAE8B /* XJLLeftTableViewCell.xib in Resources */,
 				1AB650561D5F0669003CADE3 /* MoreFunctionFrame@2x.png in Resources */,
@@ -329,8 +339,10 @@
 				1AB650801D5F1973003CADE3 /* LayoutConstraint.swift in Sources */,
 				1AB650771D5F1973003CADE3 /* Constraint.swift in Sources */,
 				1AB650581D5F0669003CADE3 /* XHPopMenuItem.m in Sources */,
+				1A9CBC3E1D5F5BEA0019DB3C /* XJLSenderTextView.swift in Sources */,
 				1AB6507C1D5F1973003CADE3 /* ConstraintRelation.swift in Sources */,
 				1A2097901D5DD2CD008FAE8B /* ViewController.swift in Sources */,
+				1AB650881D5F3015003CADE3 /* XJLAlertController.swift in Sources */,
 				1AB650671D5F0833003CADE3 /* XJLMessageViewCell.swift in Sources */,
 				1AB6507E1D5F1973003CADE3 /* EdgeInsets.swift in Sources */,
 				1A2097B01D5DE006008FAE8B /* XJLRightTableViewCell.swift in Sources */,

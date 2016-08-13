@@ -44,9 +44,10 @@
                                             <action selector="voiceBtnClick:" destination="B63-CF-xHP" eventType="touchUpInside" id="4oK-Up-5nu"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lmM-lj-uTi">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="lmM-lj-uTi">
                                         <rect key="frame" x="98" y="5" width="168" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
@@ -128,6 +129,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="chatBgImage" destination="lec-ba-n0m" id="ScY-cX-Tt4"/>
                                             <outlet property="messageLabel" destination="Yzf-7m-ZfT" id="JfK-8H-tlp"/>
                                         </connections>
                                     </tableViewCell>
@@ -185,20 +187,18 @@
                             <constraint firstItem="FVp-bh-zmf" firstAttribute="leading" secondItem="03d-WS-h2b" secondAttribute="leading" id="rNZ-q0-Ds8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="对方用户名" id="PdJ-0t-ZBZ">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="xGl-fn-GCY"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="asi-1T-RXd"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="对方用户名" id="PdJ-0t-ZBZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="customTableView" destination="XDq-Ge-JeB" id="WNT-jD-kQ8"/>
+                        <outlet property="customTableView" destination="XDq-Ge-JeB" id="BBI-Kl-j04"/>
+                        <outlet property="inputTextView" destination="lmM-lj-uTi" id="X21-DR-75L"/>
                         <outlet property="inputToolBarBottomConst" destination="5xT-me-pMx" id="v3q-sq-Z6U"/>
                         <outlet property="inputToolBarHeightConst" destination="vME-Kf-ayl" id="Ncv-j5-b2W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ace-yG-NHW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="649" y="72"/>
+            <point key="canvasLocation" x="640" y="77"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="duH-Pn-Gub">

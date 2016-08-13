@@ -16,7 +16,8 @@ class XJLChatController: UIViewController {
     /** InputToolBar 的高度约束*/
     @IBOutlet weak var inputToolBarHeightConst: NSLayoutConstraint!
     @IBOutlet weak var customTableView: UITableView!
-    
+    @IBOutlet weak var inputTextView: UITextView!
+        
     // MARK:- 懒加载
     /** 数组存储数据*/
     lazy var data : NSMutableArray = {
@@ -28,7 +29,7 @@ class XJLChatController: UIViewController {
         let item1 = XHPopMenuItem(title: "         备注损友")
         let item2 = XHPopMenuItem(title: "         关注损友")
         let item3 = XHPopMenuItem(title: "     添加至黑名单")
-//        let item4 = XHPopMenuItem(title: "")
+
         
         var popView = XHPopMenu(menus: [item1,item2,item3])
         
@@ -38,13 +39,9 @@ class XJLChatController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //左边的Item
-        let leftItem = UIBarButtonItem(image: UIImage(named: "sound_Effect"), style: .Plain, target: self, action: "leftClickAction:")
-        self.navigationItem.leftBarButtonItem = leftItem
-        //右边的Item
-        let rightItem = UIBarButtonItem(image: UIImage(named: "sound_Effect"), style: .Plain, target: self, action: "rightClickAction:")
-        self.navigationItem.rightBarButtonItem = rightItem
         
+//        inputTextView.becomeFirstResponder()
+        setUpItem()
         //模拟数据
         self.data.addObject("1234566底部约束")
         self.data.addObject("1234566底部约束1234214底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束434底部约束")
@@ -78,7 +75,16 @@ class XJLChatController: UIViewController {
 //自定义方法
 extension XJLChatController{
     
-//    let kbHeight = 0
+    func setUpItem(){
+        //左边的Item
+        let leftItem = UIBarButtonItem(image: UIImage(named: "sound_Effect"), style: .Plain, target: self, action: "leftClickAction:")
+        self.navigationItem.leftBarButtonItem = leftItem
+        //右边的Item
+        let rightItem = UIBarButtonItem(image: UIImage(named: "sound_Effect"), style: .Plain, target: self, action: "rightClickAction:")
+        self.navigationItem.rightBarButtonItem = rightItem
+
+    }
+    
     func setupKeyBoardNotification(){
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(XJLChatController.keyBoardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         
@@ -166,9 +172,18 @@ extension XJLChatController : UITableViewDelegate{
         
         return 25 + textHeight + 25
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+        let alertVc = UIAlertController(nibName: "XJLAlertController", bundle: nil)
+        alertVc.addAction(UIAlertAction(title: "确定", style: .Default, handler: nil))
+        self.presentViewController(alertVc, animated: true, completion: nil)
+
+    }
 
 }
 
+// MARK:- 底部按钮的点击
 extension XJLChatController{
     
     @IBAction func addBtnClick(sender: UIButton) {
@@ -185,11 +200,20 @@ extension XJLChatController{
     }
     
     @IBAction func expressionBtnClick(sender: UIButton) {
+        
     }
     
     @IBAction func voiceBtnClick(sender: UIButton) {
+        
     }
+}
+
+// MARK:- 设置
+extension XJLChatController{
+    // MARK:- 懒加载属性
     
+    
+    // 2.设置子控件的位置
     
 }
 
