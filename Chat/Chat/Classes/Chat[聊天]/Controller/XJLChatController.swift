@@ -11,14 +11,11 @@ import UIKit
 class XJLChatController: UIViewController {
     
     // MARK:- 连线的属性
-    /**
-     *InputToolBar 的底部约束
-     */
+    /** InputToolBar 的底部约束*/
     @IBOutlet weak var inputToolBarBottomConst: NSLayoutConstraint!
-    /**
-     *InputToolBar 的高度约束
-     */
+    /** InputToolBar 的高度约束*/
     @IBOutlet weak var inputToolBarHeightConst: NSLayoutConstraint!
+    @IBOutlet weak var customTableView: UITableView!
     
     // MARK:- 懒加载
     /** 数组存储数据*/
@@ -28,9 +25,11 @@ class XJLChatController: UIViewController {
     
     lazy var popView : XHPopMenu = {
         
-        let item1 = XHPopMenuItem(image: nil, title: "备注损友")
-        let item2 = XHPopMenuItem(image: nil, title: "关注损友")
-        let item3 = XHPopMenuItem(image: nil, title: "添加至黑名单")
+        let item1 = XHPopMenuItem(title: "         备注损友")
+        let item2 = XHPopMenuItem(title: "         关注损友")
+        let item3 = XHPopMenuItem(title: "     添加至黑名单")
+//        let item4 = XHPopMenuItem(title: "")
+        
         var popView = XHPopMenu(menus: [item1,item2,item3])
         
         return popView
@@ -59,6 +58,12 @@ class XJLChatController: UIViewController {
         setupKeyBoardNotification()
         
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        customTableView.resignFirstResponder()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -73,6 +78,7 @@ class XJLChatController: UIViewController {
 //自定义方法
 extension XJLChatController{
     
+//    let kbHeight = 0
     func setupKeyBoardNotification(){
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(XJLChatController.keyBoardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         
@@ -82,6 +88,7 @@ extension XJLChatController{
         // 1.获取键盘的高度
         let kbEndFrm = note.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue()
         let kbHeight = kbEndFrm?.size.height
+        
         self.inputToolBarBottomConst.constant = kbHeight!
     }
     
@@ -141,7 +148,7 @@ extension XJLChatController : UITableViewDataSource{
             
             return cell!
         }
-        cell.messageLabel.text = self.data[indexPath.row] as! String;
+        cell.messageLabel.text = self.data[indexPath.row] as? String;
         return cell
     }
     
@@ -160,5 +167,29 @@ extension XJLChatController : UITableViewDelegate{
         return 25 + textHeight + 25
     }
 
+}
+
+extension XJLChatController{
+    
+    @IBAction func addBtnClick(sender: UIButton) {
+        // 0.退出键盘
+        customTableView.resignFirstResponder()
+        
+        // 1.获取键盘的高度
+        self.inputToolBarBottomConst.constant = 258
+        
+        // 2.执行动画
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @IBAction func expressionBtnClick(sender: UIButton) {
+    }
+    
+    @IBAction func voiceBtnClick(sender: UIButton) {
+    }
+    
+    
 }
 

@@ -25,4 +25,6 @@
 
 - (instancetype)initWithImage:(UIImage *)image title:(NSString *)title;
 
+- (instancetype)initWithTitle:(NSString *)title;
+
 @end
