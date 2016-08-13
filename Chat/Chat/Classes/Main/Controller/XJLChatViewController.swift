@@ -20,11 +20,11 @@ class XJLChatViewController: UIViewController {
     
     @IBOutlet weak var rightLineHeight: NSLayoutConstraint!
     @IBOutlet weak var leftLineHeight: NSLayoutConstraint!
+    
     // MARK:- 定义的属性
     let leftTableViewCellID = "leftTableViewCell"
     let rightTableViewCellID = "rightTableViewCell"
-    var cellArray = []
-    
+    var cellArray : NSMutableArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +33,19 @@ class XJLChatViewController: UIViewController {
 
         self.rightTableView.registerNib(UINib.init(nibName: "XJLRightTableViewCell", bundle: nil), forCellReuseIdentifier: rightTableViewCellID)
         
-        leftBtn.selected = true
         rightTableView.hidden = true
         leftLine.backgroundColor = UIColor.redColor()
-        leftLineHeight.constant = 3
+        
+        //模拟数据
+        self.cellArray.addObject("1234566底部约束")
+        self.cellArray.addObject("1234566底部约束")
+        self.cellArray.addObject("1234566底部约束")
+        self.cellArray.addObject("1234566底部约束")
+        self.cellArray.addObject("1234566底部约束")
+        self.cellArray.addObject("1234566底部约束1234214底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束434底部约束")
+        self.cellArray.addObject("1234566底部约束1234214底部约束42134底部约束44底部约束42134底部约束44底部约束")
+        self.cellArray.addObject("1234566底部约束1234214底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,8 +61,6 @@ extension XJLChatViewController{
         
         leftBtn.selected = true
         rightBtn.selected = false
-        leftLineHeight.constant = 3
-        rightLineHeight.constant = 1
         leftLine.backgroundColor = UIColor.redColor()
         rightLine.backgroundColor = UIColor.grayColor()
         
@@ -66,8 +73,6 @@ extension XJLChatViewController{
         
         leftBtn.selected = false
         rightBtn.selected = true
-        leftLineHeight.constant = 1
-        rightLineHeight.constant = 3
         leftLine.backgroundColor = UIColor.grayColor()
         rightLine.backgroundColor = UIColor.redColor()
         
@@ -82,7 +87,7 @@ extension XJLChatViewController:UITableViewDataSource{
     
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return 10
+        return self.cellArray.count
     }
     
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -94,9 +99,6 @@ extension XJLChatViewController:UITableViewDataSource{
             
         }else{
             let cell = rightTableView.dequeueReusableCellWithIdentifier(rightTableViewCellID) as! XJLRightTableViewCell
-//            if cell == nil {
-//                cell = XJLRightTableViewCell(style: .Default, reuseIdentifier: rightTableViewCellID)
-//            }
             
             return cell
         }
@@ -127,7 +129,7 @@ extension XJLChatViewController:UITableViewDelegate{
         }
         
         let deleteAction = UITableViewRowAction(style: .Normal, title: "删除标记") { (UITableViewRowAction, NSIndexPath) in
-            self.cellArray.delete(indexPath.row)
+            self.cellArray.removeObjectAtIndex(indexPath.row)
             self.leftTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Middle)
         }
         

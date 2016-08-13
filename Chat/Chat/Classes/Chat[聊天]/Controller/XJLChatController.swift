@@ -9,7 +9,7 @@
 import UIKit
 
 class XJLChatController: UIViewController {
-
+    
     // MARK:- 连线的属性
     /**
      *InputToolBar 的底部约束
@@ -26,9 +26,27 @@ class XJLChatController: UIViewController {
         return NSMutableArray()
     }()
     
+    lazy var popView : XHPopMenu = {
+        
+        let item1 = XHPopMenuItem(image: nil, title: "备注损友")
+        let item2 = XHPopMenuItem(image: nil, title: "关注损友")
+        let item3 = XHPopMenuItem(image: nil, title: "添加至黑名单")
+        var popView = XHPopMenu(menus: [item1,item2,item3])
+        
+        return popView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //左边的Item
+        let leftItem = UIBarButtonItem(image: UIImage(named: "sound_Effect"), style: .Plain, target: self, action: "leftClickAction:")
+        self.navigationItem.leftBarButtonItem = leftItem
+        //右边的Item
+        let rightItem = UIBarButtonItem(image: UIImage(named: "sound_Effect"), style: .Plain, target: self, action: "rightClickAction:")
+        self.navigationItem.rightBarButtonItem = rightItem
+        
+        //模拟数据
         self.data.addObject("1234566底部约束")
         self.data.addObject("1234566底部约束1234214底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束434底部约束")
         self.data.addObject("1234566底部约束1234214底部约束42134底部约束44底部约束42134底部约束44底部约束")
@@ -52,10 +70,11 @@ class XJLChatController: UIViewController {
     
 }
 
+//自定义方法
 extension XJLChatController{
     
     func setupKeyBoardNotification(){
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyBoardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(XJLChatController.keyBoardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         
     }
     
@@ -68,6 +87,16 @@ extension XJLChatController{
     
     func keyBoardWillHide(note : NSNotification){
         self.inputToolBarBottomConst.constant = 0
+    }
+    
+    func leftClickAction(item : UIBarButtonItem){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func rightClickAction(item : UIBarButtonItem){
+        _ = popView
+        popView.showMenuAtPoint(CGPointMake(0, 0))
+        
     }
 }
 

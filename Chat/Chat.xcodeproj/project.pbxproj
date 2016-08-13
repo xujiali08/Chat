@@ -18,9 +18,13 @@
 		1A2097B01D5DE006008FAE8B /* XJLRightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2097AE1D5DE006008FAE8B /* XJLRightTableViewCell.swift */; };
 		1A2097B11D5DE006008FAE8B /* XJLRightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2097AF1D5DE006008FAE8B /* XJLRightTableViewCell.xib */; };
 		1AB650381D5ED327003CADE3 /* XJLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650371D5ED327003CADE3 /* XJLModel.swift */; };
-		1AB650431D5EDAF2003CADE3 /* XJLChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6503D1D5EDAF2003CADE3 /* XJLChatViewController.storyboard */; };
-		1AB6504A1D5EDBFF003CADE3 /* XJLMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650491D5EDBFF003CADE3 /* XJLMessageViewCell.swift */; };
-		1AB6504C1D5EDCDC003CADE3 /* XJLChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6504B1D5EDCDC003CADE3 /* XJLChatController.swift */; };
+		1AB650561D5F0669003CADE3 /* MoreFunctionFrame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6504F1D5F0669003CADE3 /* MoreFunctionFrame@2x.png */; };
+		1AB650571D5F0669003CADE3 /* XHPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650511D5F0669003CADE3 /* XHPopMenu.m */; };
+		1AB650581D5F0669003CADE3 /* XHPopMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650531D5F0669003CADE3 /* XHPopMenuItem.m */; };
+		1AB650591D5F0669003CADE3 /* XHPopMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650551D5F0669003CADE3 /* XHPopMenuItemView.m */; };
+		1AB650651D5F0833003CADE3 /* XJLChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650601D5F0833003CADE3 /* XJLChatController.swift */; };
+		1AB650661D5F0833003CADE3 /* XJLChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB650611D5F0833003CADE3 /* XJLChatViewController.storyboard */; };
+		1AB650671D5F0833003CADE3 /* XJLMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650641D5F0833003CADE3 /* XJLMessageViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +41,17 @@
 		1A2097AE1D5DE006008FAE8B /* XJLRightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLRightTableViewCell.swift; sourceTree = "<group>"; };
 		1A2097AF1D5DE006008FAE8B /* XJLRightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJLRightTableViewCell.xib; sourceTree = "<group>"; };
 		1AB650371D5ED327003CADE3 /* XJLModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLModel.swift; sourceTree = "<group>"; };
-		1AB6503D1D5EDAF2003CADE3 /* XJLChatViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XJLChatViewController.storyboard; sourceTree = "<group>"; };
-		1AB650491D5EDBFF003CADE3 /* XJLMessageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLMessageViewCell.swift; sourceTree = "<group>"; };
-		1AB6504B1D5EDCDC003CADE3 /* XJLChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLChatController.swift; sourceTree = "<group>"; };
+		1AB6504F1D5F0669003CADE3 /* MoreFunctionFrame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreFunctionFrame@2x.png"; sourceTree = "<group>"; };
+		1AB650501D5F0669003CADE3 /* XHPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenu.h; sourceTree = "<group>"; };
+		1AB650511D5F0669003CADE3 /* XHPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPopMenu.m; sourceTree = "<group>"; };
+		1AB650521D5F0669003CADE3 /* XHPopMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenuItem.h; sourceTree = "<group>"; };
+		1AB650531D5F0669003CADE3 /* XHPopMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPopMenuItem.m; sourceTree = "<group>"; };
+		1AB650541D5F0669003CADE3 /* XHPopMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenuItemView.h; sourceTree = "<group>"; };
+		1AB650551D5F0669003CADE3 /* XHPopMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPopMenuItemView.m; sourceTree = "<group>"; };
+		1AB6505D1D5F073A003CADE3 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Bridge.h; path = Classes/Bridge.h; sourceTree = "<group>"; };
+		1AB650601D5F0833003CADE3 /* XJLChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLChatController.swift; sourceTree = "<group>"; };
+		1AB650611D5F0833003CADE3 /* XJLChatViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XJLChatViewController.storyboard; sourceTree = "<group>"; };
+		1AB650641D5F0833003CADE3 /* XJLMessageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLMessageViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				1A20979F1D5DD4DE008FAE8B /* Classes */,
-				1AB650391D5EDAF2003CADE3 /* Chat[聊天] */,
 				1A20978D1D5DD2CD008FAE8B /* AppDelegate.swift */,
 				1A20978F1D5DD2CD008FAE8B /* ViewController.swift */,
+				1AB6505D1D5F073A003CADE3 /* Bridge.h */,
 				1A2097911D5DD2CD008FAE8B /* Main.storyboard */,
 				1A2097941D5DD2CD008FAE8B /* Assets.xcassets */,
 				1A2097961D5DD2CD008FAE8B /* LaunchScreen.storyboard */,
@@ -87,7 +99,9 @@
 		1A20979F1D5DD4DE008FAE8B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1AB6505E1D5F0833003CADE3 /* Chat[聊天] */,
 				1A2097A01D5DD4DE008FAE8B /* Main */,
+				1AB6504D1D5F0669003CADE3 /* 3rdPart[第三方框架] */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -129,36 +143,58 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1AB650391D5EDAF2003CADE3 /* Chat[聊天] */ = {
+		1AB6504D1D5F0669003CADE3 /* 3rdPart[第三方框架] */ = {
 			isa = PBXGroup;
 			children = (
-				1AB6503A1D5EDAF2003CADE3 /* Controller */,
-				1AB6503E1D5EDAF2003CADE3 /* Model */,
-				1AB6503F1D5EDAF2003CADE3 /* View */,
+				1AB6504E1D5F0669003CADE3 /* XHPopMenu */,
+			);
+			path = "3rdPart[第三方框架]";
+			sourceTree = "<group>";
+		};
+		1AB6504E1D5F0669003CADE3 /* XHPopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1AB6504F1D5F0669003CADE3 /* MoreFunctionFrame@2x.png */,
+				1AB650501D5F0669003CADE3 /* XHPopMenu.h */,
+				1AB650511D5F0669003CADE3 /* XHPopMenu.m */,
+				1AB650521D5F0669003CADE3 /* XHPopMenuItem.h */,
+				1AB650531D5F0669003CADE3 /* XHPopMenuItem.m */,
+				1AB650541D5F0669003CADE3 /* XHPopMenuItemView.h */,
+				1AB650551D5F0669003CADE3 /* XHPopMenuItemView.m */,
+			);
+			path = XHPopMenu;
+			sourceTree = "<group>";
+		};
+		1AB6505E1D5F0833003CADE3 /* Chat[聊天] */ = {
+			isa = PBXGroup;
+			children = (
+				1AB6505F1D5F0833003CADE3 /* Controller */,
+				1AB650621D5F0833003CADE3 /* Model */,
+				1AB650631D5F0833003CADE3 /* View */,
 			);
 			path = "Chat[聊天]";
 			sourceTree = "<group>";
 		};
-		1AB6503A1D5EDAF2003CADE3 /* Controller */ = {
+		1AB6505F1D5F0833003CADE3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1AB6504B1D5EDCDC003CADE3 /* XJLChatController.swift */,
-				1AB6503D1D5EDAF2003CADE3 /* XJLChatViewController.storyboard */,
+				1AB650601D5F0833003CADE3 /* XJLChatController.swift */,
+				1AB650611D5F0833003CADE3 /* XJLChatViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		1AB6503E1D5EDAF2003CADE3 /* Model */ = {
+		1AB650621D5F0833003CADE3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		1AB6503F1D5EDAF2003CADE3 /* View */ = {
+		1AB650631D5F0833003CADE3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1AB650491D5EDBFF003CADE3 /* XJLMessageViewCell.swift */,
+				1AB650641D5F0833003CADE3 /* XJLMessageViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,10 +261,11 @@
 			files = (
 				1A2097981D5DD2CD008FAE8B /* LaunchScreen.storyboard in Resources */,
 				1A2097AD1D5DDFF7008FAE8B /* XJLLeftTableViewCell.xib in Resources */,
+				1AB650561D5F0669003CADE3 /* MoreFunctionFrame@2x.png in Resources */,
 				1A2097951D5DD2CD008FAE8B /* Assets.xcassets in Resources */,
 				1A2097B11D5DE006008FAE8B /* XJLRightTableViewCell.xib in Resources */,
-				1AB650431D5EDAF2003CADE3 /* XJLChatViewController.storyboard in Resources */,
 				1A2097931D5DD2CD008FAE8B /* Main.storyboard in Resources */,
+				1AB650661D5F0833003CADE3 /* XJLChatViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,12 +276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AB6504A1D5EDBFF003CADE3 /* XJLMessageViewCell.swift in Sources */,
+				1AB650581D5F0669003CADE3 /* XHPopMenuItem.m in Sources */,
 				1A2097901D5DD2CD008FAE8B /* ViewController.swift in Sources */,
+				1AB650671D5F0833003CADE3 /* XJLMessageViewCell.swift in Sources */,
 				1A2097B01D5DE006008FAE8B /* XJLRightTableViewCell.swift in Sources */,
 				1A2097AC1D5DDFF7008FAE8B /* XJLLeftTableViewCell.swift in Sources */,
-				1AB6504C1D5EDCDC003CADE3 /* XJLChatController.swift in Sources */,
+				1AB650591D5F0669003CADE3 /* XHPopMenuItemView.m in Sources */,
 				1A2097A51D5DD50B008FAE8B /* XJLChatViewController.swift in Sources */,
+				1AB650651D5F0833003CADE3 /* XJLChatController.swift in Sources */,
+				1AB650571D5F0669003CADE3 /* XHPopMenu.m in Sources */,
 				1AB650381D5ED327003CADE3 /* XJLModel.swift in Sources */,
 				1A20978E1D5DD2CD008FAE8B /* AppDelegate.swift in Sources */,
 			);
@@ -363,6 +403,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.hpu.cst.www.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/mac/Desktop/Chat/Chat/Chat/Chat/Classes/Bridge.h;
 			};
 			name = Debug;
 		};
@@ -374,6 +415,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.hpu.cst.www.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/mac/Desktop/Chat/Chat/Chat/Chat/Classes/Bridge.h;
 			};
 			name = Release;
 		};
