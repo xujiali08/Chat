@@ -17,6 +17,10 @@
 		1A2097AD1D5DDFF7008FAE8B /* XJLLeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2097AB1D5DDFF7008FAE8B /* XJLLeftTableViewCell.xib */; };
 		1A2097B01D5DE006008FAE8B /* XJLRightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2097AE1D5DE006008FAE8B /* XJLRightTableViewCell.swift */; };
 		1A2097B11D5DE006008FAE8B /* XJLRightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2097AF1D5DE006008FAE8B /* XJLRightTableViewCell.xib */; };
+		1AB650381D5ED327003CADE3 /* XJLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650371D5ED327003CADE3 /* XJLModel.swift */; };
+		1AB650431D5EDAF2003CADE3 /* XJLChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6503D1D5EDAF2003CADE3 /* XJLChatViewController.storyboard */; };
+		1AB6504A1D5EDBFF003CADE3 /* XJLMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB650491D5EDBFF003CADE3 /* XJLMessageViewCell.swift */; };
+		1AB6504C1D5EDCDC003CADE3 /* XJLChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6504B1D5EDCDC003CADE3 /* XJLChatController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		1A2097AB1D5DDFF7008FAE8B /* XJLLeftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJLLeftTableViewCell.xib; sourceTree = "<group>"; };
 		1A2097AE1D5DE006008FAE8B /* XJLRightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLRightTableViewCell.swift; sourceTree = "<group>"; };
 		1A2097AF1D5DE006008FAE8B /* XJLRightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJLRightTableViewCell.xib; sourceTree = "<group>"; };
+		1AB650371D5ED327003CADE3 /* XJLModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLModel.swift; sourceTree = "<group>"; };
+		1AB6503D1D5EDAF2003CADE3 /* XJLChatViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XJLChatViewController.storyboard; sourceTree = "<group>"; };
+		1AB650491D5EDBFF003CADE3 /* XJLMessageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLMessageViewCell.swift; sourceTree = "<group>"; };
+		1AB6504B1D5EDCDC003CADE3 /* XJLChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJLChatController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				1A20979F1D5DD4DE008FAE8B /* Classes */,
+				1AB650391D5EDAF2003CADE3 /* Chat[聊天] */,
 				1A20978D1D5DD2CD008FAE8B /* AppDelegate.swift */,
 				1A20978F1D5DD2CD008FAE8B /* ViewController.swift */,
 				1A2097911D5DD2CD008FAE8B /* Main.storyboard */,
@@ -104,6 +113,7 @@
 		1A2097A21D5DD4DE008FAE8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1AB650371D5ED327003CADE3 /* XJLModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +125,40 @@
 				1A2097AB1D5DDFF7008FAE8B /* XJLLeftTableViewCell.xib */,
 				1A2097AE1D5DE006008FAE8B /* XJLRightTableViewCell.swift */,
 				1A2097AF1D5DE006008FAE8B /* XJLRightTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1AB650391D5EDAF2003CADE3 /* Chat[聊天] */ = {
+			isa = PBXGroup;
+			children = (
+				1AB6503A1D5EDAF2003CADE3 /* Controller */,
+				1AB6503E1D5EDAF2003CADE3 /* Model */,
+				1AB6503F1D5EDAF2003CADE3 /* View */,
+			);
+			path = "Chat[聊天]";
+			sourceTree = "<group>";
+		};
+		1AB6503A1D5EDAF2003CADE3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1AB6504B1D5EDCDC003CADE3 /* XJLChatController.swift */,
+				1AB6503D1D5EDAF2003CADE3 /* XJLChatViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AB6503E1D5EDAF2003CADE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AB6503F1D5EDAF2003CADE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1AB650491D5EDBFF003CADE3 /* XJLMessageViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +227,7 @@
 				1A2097AD1D5DDFF7008FAE8B /* XJLLeftTableViewCell.xib in Resources */,
 				1A2097951D5DD2CD008FAE8B /* Assets.xcassets in Resources */,
 				1A2097B11D5DE006008FAE8B /* XJLRightTableViewCell.xib in Resources */,
+				1AB650431D5EDAF2003CADE3 /* XJLChatViewController.storyboard in Resources */,
 				1A2097931D5DD2CD008FAE8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,10 +239,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB6504A1D5EDBFF003CADE3 /* XJLMessageViewCell.swift in Sources */,
 				1A2097901D5DD2CD008FAE8B /* ViewController.swift in Sources */,
 				1A2097B01D5DE006008FAE8B /* XJLRightTableViewCell.swift in Sources */,
 				1A2097AC1D5DDFF7008FAE8B /* XJLLeftTableViewCell.swift in Sources */,
+				1AB6504C1D5EDCDC003CADE3 /* XJLChatController.swift in Sources */,
 				1A2097A51D5DD50B008FAE8B /* XJLChatViewController.swift in Sources */,
+				1AB650381D5ED327003CADE3 /* XJLModel.swift in Sources */,
 				1A20978E1D5DD2CD008FAE8B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +396,7 @@
 				1A20979E1D5DD2CD008FAE8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

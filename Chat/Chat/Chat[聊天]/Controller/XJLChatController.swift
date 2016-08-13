@@ -1,0 +1,135 @@
+//
+//  XJLChatController.swift
+//  Chat
+//
+//  Created by XJL on 16/8/13.
+//  Copyright © 2016年 Xujiali. All rights reserved.
+//
+
+import UIKit
+
+class XJLChatController: UIViewController {
+
+    // MARK:- 连线的属性
+    /**
+     *InputToolBar 的底部约束
+     */
+    @IBOutlet weak var inputToolBarBottomConst: NSLayoutConstraint!
+    /**
+     *InputToolBar 的高度约束
+     */
+    @IBOutlet weak var inputToolBarHeightConst: NSLayoutConstraint!
+    
+    // MARK:- 懒加载
+    /** 数组存储数据*/
+    lazy var data : NSMutableArray = {
+        return NSMutableArray()
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.data.addObject("1234566底部约束")
+        self.data.addObject("1234566底部约束1234214底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束434底部约束")
+        self.data.addObject("1234566底部约束1234214底部约束42134底部约束44底部约束42134底部约束44底部约束")
+        self.data.addObject("1234566底部约束1234214底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134底部约束44底部约束42134")
+        self.data.addObject("1234566底部约束")
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        
+        setupKeyBoardNotification()
+        
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+}
+
+extension XJLChatController{
+    
+    func setupKeyBoardNotification(){
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyBoardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        
+    }
+    
+    func keyBoardWillShow(note : NSNotification){
+        // 1.获取键盘的高度
+        let kbEndFrm = note.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue()
+        let kbHeight = kbEndFrm?.size.height
+        self.inputToolBarBottomConst.constant = kbHeight!
+    }
+    
+    func keyBoardWillHide(note : NSNotification){
+        self.inputToolBarBottomConst.constant = 0
+    }
+}
+
+// MARK:- 监听文本内容的改变
+extension XJLChatController : UITextViewDelegate{
+    func textViewDidChange(textView: UITextView) {
+        var textHeight = textView.contentSize.height
+        if textHeight > 68 {
+            textHeight = 67
+        }
+        
+        self.inputToolBarHeightConst.constant = 5 + textHeight + 6
+        if textView.text.hasSuffix("\n") {
+            textView.text = ""
+            self.inputToolBarHeightConst.constant = 44
+            
+        }
+    }
+    
+}
+
+// MARK:- 表格的数据源
+extension XJLChatController : UITableViewDataSource{
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.data.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let senderCellID = "senderCell"
+        let receiveCellID = "receiveCell"
+        
+        let cell : XJLMessageViewCell
+        
+        if indexPath.row % 2 == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier(senderCellID)
+            
+            return cell!
+            
+        }else{
+            let cell = tableView.dequeueReusableCellWithIdentifier(receiveCellID)
+            
+            return cell!
+        }
+        cell.messageLabel.text = self.data[indexPath.row] as! String;
+        return cell
+    }
+    
+}
+
+// MARK:- 代理方法
+extension XJLChatController : UITableViewDelegate{
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let text = self.data[indexPath.row]
+        let size = CGSizeMake(240,CGFloat(MAXFLOAT))
+        let textHeight = text.boundingRectWithSize(size, options: .UsesLineFragmentOrigin, context: nil).size.height
+        
+//        let textHeight = text.boundingRectWithSize(size , options: NSStringDrawingOptions.UsesLineFragmentOrigin , attributes : NSDictionary(object:UIFont.systemFontOfSize(15), forKey: NSFontAttributeName) as [NSObject : AnyObject], context:nil ).size.height
+        
+        return 25 + textHeight + 25
+    }
+
+}
+

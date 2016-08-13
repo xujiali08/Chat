@@ -15,20 +15,28 @@ class XJLChatViewController: UIViewController {
     @IBOutlet weak var rightLine: UIView!
     @IBOutlet weak var leftTableView: UITableView!
     @IBOutlet weak var rightTableView: UITableView!
+    @IBOutlet weak var leftBtn: UIButton!
+    @IBOutlet weak var rightBtn: UIButton!
     
+    @IBOutlet weak var rightLineHeight: NSLayoutConstraint!
+    @IBOutlet weak var leftLineHeight: NSLayoutConstraint!
     // MARK:- 定义的属性
     let leftTableViewCellID = "leftTableViewCell"
     let rightTableViewCellID = "rightTableViewCell"
+    var cellArray = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ 
         self.leftTableView.registerNib(UINib.init(nibName: "XJLLeftTableViewCell", bundle: nil), forCellReuseIdentifier: leftTableViewCellID)
-//        self.leftTableView.registerClass(XJLLeftTableViewCell.self, forCellReuseIdentifier: leftTableViewCellID)
-        
+
         self.rightTableView.registerNib(UINib.init(nibName: "XJLRightTableViewCell", bundle: nil), forCellReuseIdentifier: rightTableViewCellID)
-//        self.rightTableView.registerClass(XJLRightTableViewCell.self, forCellReuseIdentifier: rightTableViewCellID)
         
+        leftBtn.selected = true
+        rightTableView.hidden = true
+        leftLine.backgroundColor = UIColor.redColor()
+        leftLineHeight.constant = 3
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +50,10 @@ extension XJLChatViewController{
     
     @IBAction func leftBtnClick(sender: UIButton) {
         
+        leftBtn.selected = true
+        rightBtn.selected = false
+        leftLineHeight.constant = 3
+        rightLineHeight.constant = 1
         leftLine.backgroundColor = UIColor.redColor()
         rightLine.backgroundColor = UIColor.grayColor()
         
@@ -52,6 +64,10 @@ extension XJLChatViewController{
     
     @IBAction func rightBtnClick(sender: UIButton) {
         
+        leftBtn.selected = false
+        rightBtn.selected = true
+        leftLineHeight.constant = 1
+        rightLineHeight.constant = 3
         leftLine.backgroundColor = UIColor.grayColor()
         rightLine.backgroundColor = UIColor.redColor()
         
@@ -72,15 +88,60 @@ extension XJLChatViewController:UITableViewDataSource{
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if leftTableView.hidden == false {
-            let cell = tableView.dequeueReusableCellWithIdentifier(leftTableViewCellID, forIndexPath: indexPath) as! XJLLeftTableViewCell
+            let cell = leftTableView.dequeueReusableCellWithIdentifier(leftTableViewCellID) as! XJLLeftTableViewCell
             
             return cell
             
         }else{
-            let cell = tableView.dequeueReusableCellWithIdentifier(rightTableViewCellID, forIndexPath: indexPath) as! XJLRightTableViewCell
+            let cell = rightTableView.dequeueReusableCellWithIdentifier(rightTableViewCellID) as! XJLRightTableViewCell
+//            if cell == nil {
+//                cell = XJLRightTableViewCell(style: .Default, reuseIdentifier: rightTableViewCellID)
+//            }
             
             return cell
         }
+    }
+    
+}
+
+func signBtnClick(btn : UIButton) -> Void {
+    
+}
+
+//     MARK: - Table view delegate
+extension XJLChatViewController:UITableViewDelegate{
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        if leftTableView.hidden == false {
+            return 66
+        }else{
+            return 44
+        }
+    }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        
+        let signAction = UITableViewRowAction(style: .Normal, title: "标记") { (UITableViewRowAction, NSIndexPath) in
+            self.leftTableView.editing = false
+        }
+        
+        let deleteAction = UITableViewRowAction(style: .Normal, title: "删除标记") { (UITableViewRowAction, NSIndexPath) in
+            self.cellArray.delete(indexPath.row)
+            self.leftTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Middle)
+        }
+        
+        deleteAction.backgroundColor = UIColor.redColor()
+        return [deleteAction,signAction]
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let sb = UIStoryboard(name: "XJLChatViewController", bundle: nil)
+        let chatVc = sb.instantiateInitialViewController()
+        presentViewController(chatVc!, animated: true, completion: nil)
         
     }
 }
+
+
+

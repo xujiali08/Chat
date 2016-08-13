@@ -18,37 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1BA-Pc-eEf">
-                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0Z-rH-geL" userLabel="leftBtn">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="44"/>
-                                        <color key="backgroundColor" red="0.66139942461638079" green="0.72705308991691697" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="leftBtnClick:" destination="nlr-xJ-sAx" eventType="touchUpInside" id="62V-ga-cym"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sU7-Ld-Olx" userLabel="RightBtn">
-                                        <rect key="frame" x="160" y="0.0" width="160" height="44"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <connections>
-                                            <action selector="rightBtnClick:" destination="nlr-xJ-sAx" eventType="touchUpInside" id="rzU-NW-IGS"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="r0Z-rH-geL" firstAttribute="top" secondItem="1BA-Pc-eEf" secondAttribute="top" id="DR6-ld-88j"/>
-                                    <constraint firstAttribute="height" constant="44" id="Fl5-97-XF6"/>
-                                    <constraint firstAttribute="bottom" secondItem="r0Z-rH-geL" secondAttribute="bottom" id="MKu-tI-cQE"/>
-                                    <constraint firstAttribute="bottom" secondItem="sU7-Ld-Olx" secondAttribute="bottom" id="NaY-HN-kH7"/>
-                                    <constraint firstAttribute="trailing" secondItem="sU7-Ld-Olx" secondAttribute="trailing" id="VnX-dl-YJN"/>
-                                    <constraint firstItem="sU7-Ld-Olx" firstAttribute="top" secondItem="1BA-Pc-eEf" secondAttribute="top" id="it3-aa-CSv"/>
-                                    <constraint firstItem="sU7-Ld-Olx" firstAttribute="width" secondItem="1BA-Pc-eEf" secondAttribute="width" multiplier="0.5" id="oa4-7X-9jZ"/>
-                                    <constraint firstItem="sU7-Ld-Olx" firstAttribute="leading" secondItem="r0Z-rH-geL" secondAttribute="trailing" id="pCC-Pi-6Q0"/>
-                                    <constraint firstItem="r0Z-rH-geL" firstAttribute="leading" secondItem="1BA-Pc-eEf" secondAttribute="leading" id="yDJ-wT-gvJ"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bA-8o-Eyv" userLabel="leftLine">
                                 <rect key="frame" x="0.0" y="108" width="160" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,11 +32,43 @@
                                     <constraint firstAttribute="height" constant="1" id="kkV-J9-bWM"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q6E-2V-CeK" userLabel="LeftTable View" customClass="XJLLeftTableView" customModule="Chat" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1BA-Pc-eEf">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0Z-rH-geL" userLabel="leftBtn">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="44"/>
+                                        <color key="backgroundColor" red="0.66139942461638079" green="0.72705308991691697" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="leftBtnClick:" destination="nlr-xJ-sAx" eventType="touchUpInside" id="62V-ga-cym"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sU7-Ld-Olx" userLabel="RightBtn">
+                                        <rect key="frame" x="160" y="0.0" width="160" height="44"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <connections>
+                                            <action selector="rightBtnClick:" destination="nlr-xJ-sAx" eventType="touchUpInside" id="rzU-NW-IGS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="r0Z-rH-geL" firstAttribute="top" secondItem="1BA-Pc-eEf" secondAttribute="top" id="DR6-ld-88j"/>
+                                    <constraint firstAttribute="height" constant="44" id="Fl5-97-XF6"/>
+                                    <constraint firstAttribute="bottom" secondItem="r0Z-rH-geL" secondAttribute="bottom" id="MKu-tI-cQE"/>
+                                    <constraint firstAttribute="bottom" secondItem="sU7-Ld-Olx" secondAttribute="bottom" id="NaY-HN-kH7"/>
+                                    <constraint firstAttribute="trailing" secondItem="sU7-Ld-Olx" secondAttribute="trailing" id="VnX-dl-YJN"/>
+                                    <constraint firstItem="sU7-Ld-Olx" firstAttribute="top" secondItem="1BA-Pc-eEf" secondAttribute="top" id="it3-aa-CSv"/>
+                                    <constraint firstItem="sU7-Ld-Olx" firstAttribute="width" secondItem="1BA-Pc-eEf" secondAttribute="width" multiplier="0.5" id="oa4-7X-9jZ"/>
+                                    <constraint firstItem="sU7-Ld-Olx" firstAttribute="leading" secondItem="r0Z-rH-geL" secondAttribute="trailing" id="pCC-Pi-6Q0"/>
+                                    <constraint firstItem="r0Z-rH-geL" firstAttribute="leading" secondItem="1BA-Pc-eEf" secondAttribute="leading" id="yDJ-wT-gvJ"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q6E-2V-CeK" userLabel="LeftTable View">
                                 <rect key="frame" x="0.0" y="109" width="320" height="371"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="leftTableViewCellID" id="mbB-5r-2tY" customClass="XJLLeftTableViewCell" customModule="Chat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="leftTableViewCell" id="mbB-5r-2tY" customClass="XJLLeftTableViewCell" customModule="Chat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mbB-5r-2tY" id="Wnm-ME-bfL">
@@ -81,11 +82,11 @@
                                     <outlet property="delegate" destination="nlr-xJ-sAx" id="oz5-tR-1AE"/>
                                 </connections>
                             </tableView>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SlT-I2-EDd" userLabel="RightTable View" customClass="XJLRightTableView" customModule="Chat" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SlT-I2-EDd" userLabel="RightTable View">
                                 <rect key="frame" x="0.0" y="109" width="320" height="371"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rightTableViewCellID" id="aJ6-E9-BIY" customClass="XJLRightTableViewCell" customModule="Chat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rightTableViewCell" id="aJ6-E9-BIY" customClass="XJLRightTableViewCell" customModule="Chat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aJ6-E9-BIY" id="puY-nM-sEw">
@@ -124,15 +125,19 @@
                     <navigationItem key="navigationItem" title="聊天" id="MWs-Bp-sc4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="leftBtn" destination="r0Z-rH-geL" id="wIz-iO-ipH"/>
                         <outlet property="leftLine" destination="2bA-8o-Eyv" id="wS7-F7-3ca"/>
+                        <outlet property="leftLineHeight" destination="kSx-EA-Gal" id="4BU-JS-9iJ"/>
                         <outlet property="leftTableView" destination="Q6E-2V-CeK" id="Hvq-vP-uod"/>
+                        <outlet property="rightBtn" destination="sU7-Ld-Olx" id="Sem-lp-cS3"/>
                         <outlet property="rightLine" destination="25V-r0-XmU" id="XSn-js-ZMo"/>
+                        <outlet property="rightLineHeight" destination="kkV-J9-bWM" id="VPh-iN-n73"/>
                         <outlet property="rightTableView" destination="SlT-I2-EDd" id="EcP-BW-EEI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lbl-DK-Hfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="237"/>
+            <point key="canvasLocation" x="1021" y="120"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TGr-VE-hoz">
@@ -151,7 +156,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhL-b4-oUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="619" y="237"/>
+            <point key="canvasLocation" x="477" y="212"/>
         </scene>
     </scenes>
 </document>
